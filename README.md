@@ -21,10 +21,4 @@ Backend
 - cd backend
 - python server.py
 
-The main image Search logic is in * Test.py * file.
-
-# The Problem 
-
-![image](https://github.com/Divyansh-0/RelicAI/assets/103991557/24213417-c2c3-4367-ae04-953d3cd7da7f)
-
-The test.py prompts us the enter the value for this in terminal and this should be automated. We have to figure this out !!
+The main image Search logic is in /Test.py/ file
