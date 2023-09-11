@@ -1,4 +1,5 @@
 from DeepImageSearch import Load_Data, Search_Setup
+from my_search_setup import MySearchSetup
 import os
 
 
@@ -7,12 +8,12 @@ def process_img(test_image_path, number_of_images=2):
     dl = Load_Data()
     image_list = dl.from_folder(folder_list=["backend\img_db"])
     print(image_list)
+    st = MySearchSetup(
+        image_list, model_name="vgg19", pretrained=True, image_count=None
+    )
 
-    st = Search_Setup(image_list, model_name="vgg19", pretrained=True, image_count=None)
-
-    # Run indexing without interactive prompts
-    st.run_index()
-
+    # st = Search_Setup(image_list, model_name="vgg19", pretrained=True, image_count=None)
+    st.run_index(flag="true")
     # Get similar images
     similar_images = st.get_similar_images(
         image_path=test_image_path,
