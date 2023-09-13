@@ -1,0 +1,7 @@
+[
+    {"monument_name": "Taj Mahal", "weight": 5},
+    {"monument_name": "Eiffel Tower", "weight": 4},
+    {"monument_name": "Great Wall of China", "weight": 3},
+    {"monument_name": "Machu Picchu", "weight": 2},
+    {"monument_name": "Pyramids of Giza", "weight": 1}
+]
