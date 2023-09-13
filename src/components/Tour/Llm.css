@@ -1,0 +1,14 @@
+.llm {
+  display: flex;
+  flex-direction: column;
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+}
+
+.block input {
+  height: 35px;
+  margin-top: 20px;
+}
