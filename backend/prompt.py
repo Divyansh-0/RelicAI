@@ -22,11 +22,12 @@ def generate_monument_summary(time, knowledge_level, interest):
     # Generate the list of monument summaries
     monument_summaries = []
     for monument, normalized_weight in normalized_weights:
-        print(type(normalized_weight))
-        print(type(words_per_second))
-        print(type(total_time))
+        # print(type(normalized_weight))
+        # print(type(words_per_second))
+        # print(type(total_time))
         word_limit = int(normalized_weight * words_per_second * (total_time))
-        prompt = f"For a tourist of {knowledge_level} background knowledge and particularly interested in {interest}, Create a  guided tour about {monument} given the knowledge you have and tell user what they should visit in the {total_time} seconds. Given they have {total_time} seconds , make sure that user's time doesn't go to waste."
+        # prompt = f"For a tourist of {knowledge_level} background knowledge and particularly interested in {interest}, Create a  guided tour about {monument} given the knowledge you have and tell user what they should visit in the {total_time} seconds. Given they have {total_time} seconds , make sure that user's time doesn't go to waste."
+        prompt = f"For a tourist of {knowledge_level} background knowledge and particularly interested in {interest}, provide description about monument in less than  {int(normalized_weight * words_per_second * total_time)*0.5} words."
         monument_summaries.append((monument, prompt))
 
     return monument_summaries

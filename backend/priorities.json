@@ -1,1 +1,5 @@
-[{ "monument_name": "Taj Mahal", "weight": 3.0 }]
+[
+  { "monument_name": "Ramaiah Statue", "weight": 3 },
+  { "monument_name": "Campus Cafeteria", "weight": 2 },
+  { "monument_name": "Basketball court", "weight": 1 }
+]
