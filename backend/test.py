@@ -1,4 +1,4 @@
-from DeepImageSearch import Load_Data, Search_Setup
+from DeepImageSearch import Load_Data
 from my_search_setup import MySearchSetup
 import os
 
@@ -6,11 +6,14 @@ import os
 def process_img(test_image_path, number_of_images=2):
     print(test_image_path)
     dl = Load_Data()
-    image_list = dl.from_folder(folder_list=["backend\img_db"])
+    image_list = dl.from_folder(folder_list=["D:\RelicAI\img_db"])
     print(image_list)
     st = MySearchSetup(
         image_list, model_name="vgg19", pretrained=True, image_count=None
     )
+    # for files in os.walk("D:\RelicAI\img_db"):
+    #     for file in files:
+    #         print(file)
 
     # st = Search_Setup(image_list, model_name="vgg19", pretrained=True, image_count=None)
     st.run_index(flag="true")
